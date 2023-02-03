@@ -1,0 +1,11 @@
+/* I DID THIS ALL BY MYSELD!! NO REFERENCES, JUST THINKING IT THROUGH, AND APPLYING IT!!! */
+
+/* Making the border of the input field turn red and dotted when nothing is entered */
+input:invalid {
+    border: red solid;
+}
+
+/* Making the border of the input field turn black and solid when correct data is entered */
+input:valid {
+    border: black solid;
+}
