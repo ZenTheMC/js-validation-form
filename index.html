@@ -9,21 +9,23 @@
     <title>Validation Form</title>
 </head>
 <body>
-    
-    <!-- I DID THIS ALL BY MYSELD!! NO REFERENCES, JUST THINKING IT THROUGH, AND APPLYING IT!!! -->
-
     <div class="container">
-        <form>
+        <form id="form">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
+            <input id="email" name="email" type="email" required/>
+            <span class="error" aria-live="polite"></span>
             <label for="country">Country</label>
-            <input for="country" name="country" type="text" required>
+            <input for="country" name="country" type="text" minlength="2" required/>
+            <span class="error" aria-live="polite"></span>
             <label for="zip-code">Zip Code</label>
-            <input id="zip-code" name="zip-code" type="number" required>
+            <input id="zip-code" name="zip-code" type="number" minlength="5" maxlength="5" pattern="\d\d\d\d\d" required/>
+            <span class="error" aria-live="polite"></span>
             <label for="password">Password</label>
-            <input id="password" name="password" type="password" required>
+            <input id="password" name="password" type="password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{6,}" required/>
+            <span class="error" aria-live="polite"></span>
             <label for="confirm-password">Confirm Password</label>
-            <input id="confirm-password" name="confirm-password" type="password" required>
+            <input id="confirm-password" name="confirm-password" type="password" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{6,}" required>
+            <span class="error" aria-live="polite"></span>
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
         </form>

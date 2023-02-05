@@ -1,11 +1,37 @@
-/* I DID THIS ALL BY MYSELD!! NO REFERENCES, JUST THINKING IT THROUGH, AND APPLYING IT!!! */
-
-/* Making the border of the input field turn red and dotted when nothing is entered */
-input:invalid {
-    border: red solid;
+form {
+    display: grid;
+    width: 90%;
 }
 
-/* Making the border of the input field turn black and solid when correct data is entered */
-input:valid {
-    border: black solid;
+input {
+    margin-bottom: 10px;
+}
+
+.submit-button, .reset-button {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    width: 40%;
+}
+
+#email:invalid, #country:invalid, #zip:invalid, #pw:invalid, #conf-pw:invalid {
+    background-color: #fdd
+}
+
+#email:focus:invalid, #country:focus:invalid, #zip:focus:invalid, #pw:focus:invalid, #conf-pw:focus:invalid {
+    background-color: none;
+}
+
+.error {
+    width: 100%;
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
 }
